@@ -11,14 +11,14 @@ const Navbar = () => {
   return (
     <Menu fluid borderless>
       <Container text>
-        <Link href='/login'>
+        <Link href='/login' passHref>
           <Menu.Item header active={isActive('/login')}>
             <Icon size='large' name='sign in' />
             Login
           </Menu.Item>
         </Link>
 
-        <Link href='/signup'>
+        <Link href='/signup' passHref>
           <Menu.Item header active={isActive('/signup')}>
             <Icon size='large' name='signup' />
             Signup

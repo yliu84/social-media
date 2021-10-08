@@ -20,7 +20,7 @@ const SideMenu = ({
         verticalAlign='middle'
         selection
       >
-        <Link href='/'>
+        <Link href='/' passHref>
           <List.Item active={isActive('/')}>
             <Icon name='home' size='large' color={isActive('/') && 'teal'} />
             <List.Content>{pc && <List.Header content='Home' />}</List.Content>
@@ -43,7 +43,7 @@ const SideMenu = ({
 
         <br />
 
-        <Link href='/notifications'>
+        <Link href='/notifications' passHref>
           <List.Item active={isActive('/notifications')}>
             <Icon
               name={unreadNotification ? 'hand point right' : 'bell outline'}
@@ -60,7 +60,7 @@ const SideMenu = ({
         </Link>
         <br />
 
-        <Link href={`/${username}`}>
+        <Link href={`/${username}`} passHref>
           <List.Item active={router.query.username === username}>
             <Icon
               name='user'

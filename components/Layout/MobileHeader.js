@@ -14,13 +14,13 @@ const MobileHeader = ({
     <>
       <Menu fluid borderless>
         <Container text>
-          <Link href='/'>
+          <Link href='/' passHref>
             <Menu.Item header active={isActive('/')}>
               <Icon name='rss' size='large' />
             </Menu.Item>
           </Link>
 
-          <Link href='/messages'>
+          <Link href='/messages' passHref>
             <Menu.Item header active={isActive('/messages') || unreadMessage}>
               <Icon
                 name={unreadMessage ? 'hand point right' : 'mail outline'}
@@ -29,7 +29,7 @@ const MobileHeader = ({
             </Menu.Item>
           </Link>
 
-          <Link href='/notifications'>
+          <Link href='/notifications' passHref>
             <Menu.Item
               header
               active={isActive('/notifications') || unreadNotification}
@@ -43,14 +43,14 @@ const MobileHeader = ({
 
           <Dropdown item icon='bars' direction='left'>
             <Dropdown.Menu>
-              <Link href={`/${username}`}>
+              <Link href={`/${username}`} passHref>
                 <Dropdown.Item active={isActive(`/${username}`)}>
                   <Icon name='user' size='large' />
                   Account
                 </Dropdown.Item>
               </Link>
 
-              <Link href='/search'>
+              <Link href='/search' passHref>
                 <Dropdown.Item active={isActive('/search')}>
                   <Icon name='search' size='large' />
                   Search
